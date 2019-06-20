@@ -24,11 +24,14 @@
 	</properties>
 
 	<dependencies>
+
+		<!-- 对Web项目开发的支持，包括Tomcat和spring-webmvc -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		
+
+		<!-- 对常用的测试框架Junit、Mockkits的支持，包括spring-test模块 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>

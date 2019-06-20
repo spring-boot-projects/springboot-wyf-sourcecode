@@ -8,9 +8,9 @@ public class Main {
 		  AnnotationConfigApplicationContext context =  
 				  new AnnotationConfigApplicationContext();
 		  
-		  context.getEnvironment().setActiveProfiles("dev"); //1
-		  context.register(ProfileConfig.class);//2
-		  context.refresh(); //3
+		  context.getEnvironment().setActiveProfiles("dev"); //1 获取环境上下文，设置激活的profile为dev
+		  context.register(ProfileConfig.class);//2 后置注册Bean配置类，不然会报Bean未定义错误
+		  context.refresh(); //3 刷新容器
 		  
 	      DemoBean demoBean = context.getBean(DemoBean.class);
 	      

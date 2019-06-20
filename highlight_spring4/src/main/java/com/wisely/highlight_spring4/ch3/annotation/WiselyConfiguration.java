@@ -9,13 +9,16 @@ import java.lang.annotation.Target;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * 使用@Configuration和@ComponentScan注解到@WiselyConfiguration上，构成组合注解，使之具备元注解的功能
+ */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-@Configuration //1
-@ComponentScan //2
+@Configuration //1 组合@Configuration元注解
+@ComponentScan //2 组合@ComponentScan元注解
 public @interface WiselyConfiguration {
 	
-	String[] value() default {}; //3
+	String[] value() default {}; //3 覆盖@Configuration和@ComponentScan元注解中的value参数
 
 }

@@ -6,14 +6,15 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class ConditionConifg {
-	@Bean
-    @Conditional(WindowsCondition.class) //1
+
+    @Bean
+    @Conditional(WindowsCondition.class) //1 通过@Conditional注解，符合Windows条件则实例化WindowsListService。
     public ListService windowsListService() {
         return new WindowsListService();
     }
 
     @Bean
-    @Conditional(LinuxCondition.class) //2
+    @Conditional(LinuxCondition.class) //2 通过@Conditional注解，符合Linux条件则实例化WindowsListService。
     public ListService linuxListService() {
         return new LinuxListService();
     }
