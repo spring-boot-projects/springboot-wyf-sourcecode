@@ -1,0 +1,3 @@
+// 多个自动配置，则用","隔开，此处"\"是为了换行后仍然能读到属性
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.wisely.spring_boot_starter_hello.HelloServiceAutoConfiguration

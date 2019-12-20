@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wisely.spring_boot_starter_hello.HelloService;
+
 @RestController
 @SpringBootApplication
 public class Ch65Application {
